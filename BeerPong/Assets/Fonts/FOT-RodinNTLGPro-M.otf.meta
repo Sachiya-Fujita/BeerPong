@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: af753ba1c43ae904693b0b736dacf32c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FOT-RodinNTLG Pro
+  fontNames:
+  - FOT-RodinNTLG Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 401172e9444b6834ca3dc9181d63dcd4, type: 3}
+  - {fileID: 12800000, guid: 6d2a22bcfe256de4a9541a8d8b9e2831, type: 3}
+  - {fileID: 12800000, guid: 9f0ac7ce537843345a63aacf6431218a, type: 3}
+  - {fileID: 12800000, guid: 84da500fea3050a46be8b39d413c4da7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
