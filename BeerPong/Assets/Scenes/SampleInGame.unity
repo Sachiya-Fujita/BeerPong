@@ -1002,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101280879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75, y: 2.51, z: -3.25}
+  m_LocalPosition: {x: 4.8, y: 2.5, z: -3.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1353,7 +1353,6 @@ GameObject:
   - component: {fileID: 1509214217}
   - component: {fileID: 1509214216}
   - component: {fileID: 1509214221}
-  - component: {fileID: 1509214222}
   m_Layer: 0
   m_Name: PingPong
   m_TagString: Untagged
@@ -1443,7 +1442,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509214215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75, y: 2.29, z: -2.088}
+  m_LocalPosition: {x: 4.8, y: 2.3, z: -2.1}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1461,20 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd3de8b705a3423394e0c275bd89347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1509214222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509214215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
+  _pingPong: {fileID: 1509214215}
 --- !u!1 &1670925181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332673236598556}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.7538266, y: 0, z: 0.33357146}
+  m_LocalPosition: {x: 4.8, y: 0, z: 0.33357146}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}

@@ -3,47 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ThorwBall : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler
+public class ThorwBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private Vector3 moveTo;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private bool beRay = false;
 
-	//private void OnMouseDrag()
-	//{
-	//	Debug.Log("drag");
-	//}
+	private Camera _camera;
 
-	public void OnBeginDrag(PointerEventData eventData)
+	[SerializeField]
+	private GameObject _pingPong;
+
+	private Vector3 initialPos;
+
+	// Use this for initialization
+	void Start()
 	{
-		Debug.Log("start");
+		_camera = Camera.main;
+
+		initialPos = _pingPong.transform.position;
 	}
 
-	public void OnDrag(PointerEventData eventData)
+	// Update is called once per frame
+	void Update()
 	{
-		Debug.Log("drag");
+		if (Input.GetMouseButtonDown(0))
+		{
+			RayCheck();
+		}
+
+		if (beRay)
+		{
+			MovePoisition();
+		}
+
+		if (Input.GetMouseButtonUp(0))
+		{
+			beRay = false;
+		}
 	}
 
-	public void OnEndDrag(PointerEventData eventData)
+	private void RayCheck()
 	{
-		Debug.Log("end");
+		Ray ray = new Ray();
+		RaycastHit hit = new RaycastHit();
+		ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+		if (Physics.Raycast(ray.origin, ray.direction, out hit, Mathf.Infinity) && hit.collider == gameObject.GetComponent<Collider>())
+		{
+			beRay = true;
+		}
+		else
+		{
+			beRay = false;
+		}
+
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
+	private void MovePoisition()
 	{
-		Debug.Log("enter");
-	}
+		Vector3 mousePos = Input.mousePosition;
+		mousePos.z = -(_camera.transform.position.z - initialPos.z);
 
-	public void Drag()
-	{
-		Debug.Log("AA");
+		moveTo = Camera.main.ScreenToWorldPoint(mousePos);
+		Debug.Log(moveTo);
+		transform.position = moveTo;
 	}
 }
