@@ -11,6 +11,8 @@ public class ThorwBall : MonoBehaviour
 
 	private Camera _camera;
 
+	private Vector2 movePos;
+
 	[SerializeField]
 	private GameObject _pingPong;
 
@@ -40,6 +42,10 @@ public class ThorwBall : MonoBehaviour
 		if (Input.GetMouseButtonUp(0))
 		{
 			beRay = false;
+			if (Mathf.Abs(movePos.x) > 0.1 || Mathf.Abs(movePos.y) > 0.1)
+			{
+				this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+			}
 		}
 	}
 
@@ -66,7 +72,7 @@ public class ThorwBall : MonoBehaviour
 		mousePos.z = -(_camera.transform.position.z - initialPos.z);
 
 		moveTo = Camera.main.ScreenToWorldPoint(mousePos);
-		Debug.Log(moveTo);
 		transform.position = moveTo;
+		movePos = new Vector2(moveTo.x - initialPos.x, moveTo.y - initialPos.y);
 	}
 }
