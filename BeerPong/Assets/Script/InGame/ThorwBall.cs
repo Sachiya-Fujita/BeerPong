@@ -44,7 +44,14 @@ public class ThorwBall : MonoBehaviour
 			beRay = false;
 			if (Mathf.Abs(movePos.x) > 0.1 || Mathf.Abs(movePos.y) > 0.1)
 			{
-				this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+				Rigidbody _rigid = this.gameObject.GetComponent<Rigidbody>();
+				_rigid.isKinematic = false;
+				Vector3 _addVector = new Vector3(movePos.x, movePos.y / Mathf.Sqrt(2.0f), movePos.y / Mathf.Sqrt(2.0f));
+				_rigid.AddForce(_addVector * 10.0f, ForceMode.Impulse);
+			}
+			else
+			{
+				this.gameObject.transform.position = initialPos;
 			}
 		}
 	}
