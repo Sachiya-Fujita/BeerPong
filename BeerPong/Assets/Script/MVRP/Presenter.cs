@@ -20,15 +20,15 @@ namespace UniRx
 
 namespace UniRx_MVRP
 {
-    public abstract class Presenter : MonoBehaviour
-    {
-        protected AsyncSubject<Unit> _ready
-            = new AsyncSubject<Unit>();
+	public abstract class Presenter : MonoBehaviour
+	{
+		protected AsyncSubject<Unit> _ready
+			= new AsyncSubject<Unit>();
 
-        protected IObserver<Unit> ReadyAsync
-        {
-            get { return _ready; }
-        }
+		protected IObserver<Unit> ReadyAsync
+		{
+			get { return _ready; }
+		}
 
 		protected AsyncSubject<Unit> _doneSetup
 			= new AsyncSubject<Unit>();
@@ -65,6 +65,6 @@ namespace UniRx_MVRP
 		protected void Dispose()
 		{
 		}
-    }
+	}
 }
 

@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneUtility : SingletonMonoBehaviour<SceneUtility>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Start is called before the first frame update
+	void Start()
+	{
 		DontDestroyOnLoad(this.gameObject);
 	}
 
