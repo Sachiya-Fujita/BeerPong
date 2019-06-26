@@ -1165,7 +1165,7 @@ Transform:
   m_Children:
   - {fileID: 1670925182}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &201231565
 MonoBehaviour:
@@ -3532,7 +3532,7 @@ Transform:
   - {fileID: 54104960}
   - {fileID: 1617608116}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992636689
 PrefabInstance:
@@ -4924,8 +4924,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1509214221}
-        m_MethodName: ResetPos
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5082,7 +5082,7 @@ GameObject:
   - component: {fileID: 1509214221}
   m_Layer: 0
   m_Name: PingPong
-  m_TagString: Untagged
+  m_TagString: PingPong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5695,10 +5695,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1670925184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5756,7 +5756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _homeButton: {fileID: 134523820}
   _testButton: {fileID: 698264482}
-  _resetButton: {fileID: 698264482}
+  _resetButton: {fileID: 1403166175}
   _pingPong: {fileID: 1509214215}
 --- !u!1001 &1678169472
 PrefabInstance:

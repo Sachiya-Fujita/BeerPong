@@ -21,7 +21,7 @@ public class UiManager : Presenter
 			.AddTo(this);
 
 		_view.ResetButton.OnSafeClickAsObservable()
-			.Subscribe(_ => Debug.Log("reset"))//_view.PingPong.GetComponent<ThorwBall>().ResetPos())
+			.Subscribe(_ => _view.PingPong.GetComponent<ThorwBall>().ResetPos())
 			.AddTo(this);
 
 		_view.TestButton.OnSafeClickAsObservable()
