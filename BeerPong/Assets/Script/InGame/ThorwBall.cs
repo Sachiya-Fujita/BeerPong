@@ -17,6 +17,8 @@ public class ThorwBall : MonoBehaviour
 
 	private Rigidbody _rigid;
 
+	private bool isUI = false;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -41,8 +43,9 @@ public class ThorwBall : MonoBehaviour
 			MovePoisition();
 		}
 
-		if (Input.GetMouseButtonUp(0))
+		if (Input.GetMouseButtonUp(0) && isUI == false)
 		{
+			Debug.Log("");
 			beRay = false;
 			if (Mathf.Abs(movePos.x) > 0.1 || Mathf.Abs(movePos.y) > 0.1)
 			{
@@ -72,6 +75,14 @@ public class ThorwBall : MonoBehaviour
 			beRay = false;
 		}
 
+		if(hit.collider.tag == "PingPong")
+		{
+			isUI = false;
+		}
+		else
+		{
+			isUI = true;
+		}
 	}
 
 	private void MovePoisition()
@@ -87,7 +98,7 @@ public class ThorwBall : MonoBehaviour
 	public void ResetPos()
 	{
 		_rigid.velocity = Vector3.zero;
-		Debug.Log("reset");
+		_rigid.isKinematic = true;
 		this.gameObject.transform.position = initialPos;
 		this.gameObject.transform.rotation = Quaternion.identity;
 
