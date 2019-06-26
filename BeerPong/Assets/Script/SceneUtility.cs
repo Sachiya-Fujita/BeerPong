@@ -24,6 +24,22 @@ public class SceneUtility : SingletonMonoBehaviour<SceneUtility>
 			case "TopPage":
 				SceneManager.LoadScene("Menu");
 				break;
+
+			case "Menu":
+				SceneManager.LoadScene("Menu");
+				break;
+
+			case "Easy":
+				SceneManager.LoadScene("SampleInGame");
+				break;
+
+			case "Normal":
+				SceneManager.LoadScene("SampleInGame");
+				break;
+
+			case "Hard":
+				SceneManager.LoadScene("SampleInGame");
+				break;
 		}
 	}
 }
