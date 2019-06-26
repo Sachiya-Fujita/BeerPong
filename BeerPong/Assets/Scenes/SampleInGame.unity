@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ba812a47f0b431faba6cd081a614ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _view: {fileID: 1670925186}
 --- !u!1 &255268499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd3de8b705a3423394e0c275bd89347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pingPong: {fileID: 0}
 --- !u!1 &1512151715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +1785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _homeButton: {fileID: 134523820}
   _testButton: {fileID: 698264482}
+  _resetButton: {fileID: 698264482}
+  _pingPong: {fileID: 1509214215}
 --- !u!1 &1917004211
 GameObject:
   m_ObjectHideFlags: 0
